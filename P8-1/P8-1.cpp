@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-int countCharacter(string str);
+int countVowel(string str);
 
 
 int main(){
@@ -11,10 +11,17 @@ int main(){
 	cout << "Input string, I guess, if you want to I mean: ";
 	cin >> input;
 
-	cout << countCharacter(input);
+	cout << countVowel(input);
 }
 
 
-int countCharacter(string str){
-	return str.length();
+int countVowel(string str){
+    int vowelCount = 0;
+    for (char vow : str){
+        vow = tolower(vow);
+        if (vow == 'a' || vow == 'e' || vow == 'i' || vow == 'o' || vow == 'u'){
+            vowelCount++;
+        }
+    }
+    return vowelCount;
 }
