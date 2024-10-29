@@ -10,9 +10,10 @@ int main(void){
 
     while (true){
         cout << "Enter a string or Q to quit: ";
-        cin >> input;
+        getline(cin, input);
 
         if (input == "Q") break;
+
         cout << "Vowel count: " << countVowel(input) << endl;
     }
     return 0;
